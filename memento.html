@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jenny Lam | CS + Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<div id="header">						
+
+				<!-- Nav -->
+				<nav style="width:83%">
+					<div style="float:left"> 
+						<a href="index.html" class="logo">
+							<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Jenny Lam</span>
+						</a>
+					</div>
+
+					<div style="float:right">
+						<ul>
+							<li><a href="index.html">Work</a></li>
+							<li><a href="play.html">Play</a></li>
+							<li><a href="#aboutme">About</a></li>
+							<li><a href="#footer">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<!-- Main -->
+			<div id="main" style="top: 150px; position: relative; padding-bottom: 150px;">
+				<div class="inner">        
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close"><a href="index.html">&times;</a></span>
+                            <div style="text-align: left; margin: 20px; padding: 20px; height: 550px; border-bottom: solid 1px black; display: flex; flex-direction: row;">
+                                <div>
+                                    <p style="font-size: 60px; font-weight: bold;"> Memento </p>
+                                    <p style="font-size: 24px; width: 85%">Memento is a wearable face reminder assistant that helps people with visual and memory-related disorders recognize others. </p>
+                                    <p style="margin-top: 15px; color: lightslategray; font-weight: bold;">SKILLS</p>
+                                    <p>Raspberry Pi W Zero, Face++, Google Glass, Kairos</p>
+                                    <p style="margin-top: 10px; color: lightslategray; font-weight: bold;">PROJECT</p>
+                                    <p>EECS 338: Practicum in Intelligent Information Systems Course Project, Resident Team at The Garage Northwestern</p>
+                                    <p style="margin-top: 10px; color: lightslategray; font-weight: bold;">TEAMMATES</p>
+                                    <p>Iteration 1: Birthe Ong Cheng, Jenny Lam, Bryan Li, Diana Smith, Qianhui Sun </p>
+                                    <p>Iteration 2: Andrew Acomb, Daniel Chang, Jenny Lam, Elise Lee, Diana Smith, Qianhui Sun </p>
+                                </div>
+                                <div>
+                                    <img src="images/memento.png" width="auto" height="auto" style="max-width: 500px;" />
+                                </div>
+                            </div>	
+
+                            <div style="display: flex; flex-direction: column; width:100%; margin: 50px;margin-top:10px; padding: 20px; width:90%">
+                                <p>The Memento system evolved over two main iterations with the inital prototype using the Raspberry Pi W Zero and Face++ face recognition platform and the second iteration built on the Google Glass and Kairos face recognition platform.</p>
+                                <br>
+                                <p><strong>Iteration 1:</strong></p>
+                                <div style="display: flex; flex-direction: row; width:100%; margin: 50px; margin-top: 0px; margin-bottom: 10px; padding: 20px; width:90%; justify-content: space-evenly;">
+                                    <p style="margin-right: 100px;">Memento uses a Raspberry Pi W Zero for its wireless capabilities and small portable camera that allows it to be more discreetly placed on a hat. By employing a pre-trainable face recognition API, Face++, Memento can train and update models based on faces it has seen and new faces. After the device correctly recognizes a face, it will communicate the associated name as a verbal reminder to the user through a server and bluetooth speaker. The following steps provide a more in depth description of the technical implementation. </p>
+                                    <img height="400px" src="images/mementos1.png" />
+                                </div>
+                                <div style="display: flex; flex-direction: row;"> 
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px;">Training Models With Face++ API </p>
+                                        <p style="color: lightslategray; font-size: 18px">A training database was constructed and stored locally. An image distributor then fetches the training images and distributes them by name in a hierarchical order which can be trained by Memento. 
+                                            When the training data is prepared, Memento interacts with Face++ and assigns a unique face_token and user_id for each image before feeding all the tokens of training images into a faceset. Face++ then trains the faceset as a model. </p>
+                                    </div>
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px">Taking Photos With Raspberry Pi </p>
+                                        <p style="color: lightslategray; font-size: 18px">After setting up the software and components on the Raspberry Pi W Zero, a script in conjunction with a crontab is created that contains a raspistill command to continuously capture images every 3 seconds and save them to a local folder.Images are also processed to be 640 x 480 and vertically flipped before being passed to Face++ to improve recognition accuracy by adjusting for file sizes and camera orientation.  </p>
+                                    </div>
+                 
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px">Recognizing Faces in Images </p>
+                                        <p style="color: lightslategray; font-size: 18px">The system will then get the newest images captured by the Raspberry Pi camera from a designated path and feed it to the trained model on the Face++ server to recognize the face(s) in the image. The trained model will return several most similar faces’ tokens and their confidences. Memento can then determine the name of the face (or new face) in the detected image. </p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div style="display: flex; flex-direction: row;">
+
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px">Outputting Names to the Speaker via a Web Server</p>
+                                        <p style="color: lightslategray; font-size: 18px">Once the Face++ API returns the correct name for a test image, the codes in Raspberry Pi will post the name to a web server. The server is deployed solely for processing people’s names, and saves the most recently recognized name. Afterwards, a Python script will fetch the name of the person saved in the server and speak it out using Text to Speech. </p>
+                                    </div>
+                               
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px">Updating the Model if a New Face is Detected </p>
+                                        <p style="color: lightslategray; font-size: 18px">Finally, if a new face is detected, Memento will update the trained model by adding a new category to it. Specifically, Memento will ask the Raspberry Pi camera to take a certain number of images (5 in our demo) of that new face in a short period of time. After assigning a face_token and user_id to each new face, Memento will upload these face images to Face++ to retain the model.  </p>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <br>
+                                <br>
+
+                                <p><strong>Iteration 2:</strong></p>
+                                <div style="display: flex; flex-direction: row; width:100%; margin: 50px; margin-top: 0px; margin-bottom: 10px; padding: 20px; width:90%; justify-content: space-evenly;">
+                                    <p style="margin-right: 100px;">Memento's second iteration focuses on upgrading the system hardware to Google Glass as the wearable technology that captures photos and interfaces with the Kairos Face Recognition Platform. Rather than store the database locally, the second iteration involved connecting to an Amazon EC2 instance to host code and store images. Additional preliminary research and prototyping helped inform the ethical implications of using face recognition technology in the Memento system.</p>
+                                    <img height="400px" src="images/mementos2.png" />
+                                </div>
+                                <div style="display: flex; flex-direction: row;"> 
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px;">User Prompted Image Capture</p>
+                                        <p style="color: lightslategray; font-size: 18px">The user prompts the Google Glass to take a picture by tapping the side of the frame. This gives the user more control over when images are taken and sent for processing rather than taking images at intervals and performing ongoing face detection.</p>
+                                    </div>
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px;">Face Recognition with Kairos</p>
+                                        <p style="color: lightslategray; font-size: 18px">The captured image is sent to the server for processing and recogniton via the Kairos platform. Once Kairos recognizes the face in the image above a confidence threshold, it returns a name string to the Google Glass.</p>
+                                    </div>
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px;">Discreet Audio Output</p>
+                                        <p style="color: lightslategray; font-size: 18px">The Google Glass receives the name string and outputs it to the wearer via text to speech through its bone conduction audio output. This feature means that only the user can hear the name audio compared to using a speaker in iteration 1.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+			
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+			
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+			
+			// When the user clicks the button, open the modal 
+			/*btn.onclick = function() {
+			  modal.style.display = "block";
+			}*/
+			
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
+
+	</body>
+</html>

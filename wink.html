@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jenny Lam | CS + Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<div id="header">						
+
+				<!-- Nav -->
+				<nav style="width:83%">
+					<div style="float:left"> 
+						<a href="index.html" class="logo">
+							<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Jenny Lam</span>
+						</a>
+					</div>
+
+					<div style="float:right">
+						<ul>
+							<li><a href="index.html">Work</a></li>
+							<li><a href="play.html">Play</a></li>
+							<li><a href="#aboutme">About</a></li>
+							<li><a href="#footer">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<!-- Main -->
+			<div id="main" style="top: 150px; position: relative; padding-bottom: 150px;">
+				<div class="inner">        
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close"><a href="index.html">&times;</a></span>
+                            <div style="text-align: left; margin: 20px; padding: 20px; height: 550px; border-bottom: solid 1px black; display: flex; flex-direction: row;">
+                                <div>
+                                    <p style="font-size: 60px; font-weight: bold;"> W;nk </p>
+                                    <p style="font-size: 24px; width: 85%"> W;nk helps prospective students and visitors to Northwestern University quickly explore and learn more about the buildings on campus.</p>
+                                    <p style="margin-top: 15px; color: lightslategray; font-weight: bold;">SKILLS</p>
+                                    <p>Android Development, UI/UX Design</p>
+                                    <p style="margin-top: 10px; color: lightslategray; font-weight: bold;">PROJECT</p>
+                                    <p>.dev Project Showcase Winter 2019, Awarded 2nd Place</p>
+                                    <p style="margin-top: 10px; color: lightslategray; font-weight: bold;">TEAMMATES</p>
+                                    <p>Andrew Acomb, Daniel Chang, Kevin Hou, Yihong Hu, Chris Mendes</p>
+                                    <p style="margin-top: 10px; color: lightslategray; font-weight: bold;">TOOLS</p>
+                                    <p>Android Studio, Firebase Realtime Database </p>
+                                </div>
+                                <div>
+                                    <img src="images/wink.png" width="auto" height="auto" style="max-width: 500px;" />
+                                </div>
+                            </div>	
+
+                            <div style="display: flex; flex-direction: column; width:100%; margin: 50px; padding: 20px; width:90%">
+                                <p>Students, especially freshmen, may have difficultly navigating their new college campuses. High school students visiting campus for the first time are also likely to get lost without a guide. W;nk helps prospective and new students explore campus buildings and culture with ease.  </p>
+                                <br>
+                                <div style="display: flex; flex-direction: row;"> 
+                                    <div>
+                                        <img src="images/wink/questionicon.png" width="150px" height="auto"/>
+                                    </div>
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px;">First-time users of the W;nk app are introduced with a tutorial that explains how to use the app.</p>
+                                        <p style="color: lightslategray; font-size: 18px">The one-page tutorial directs users to find a building on campus, point their camera in the building's direction, and take a photo capture to learn more about the building</p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div style="display: flex; flex-direction: row;">
+                                    <div>
+                                        <img src="images/hotplate/cameraicon.png" width="150px" height="auto"/>
+                                    </div>
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px">When a photo is taken, W;nk identifies the campus building. </p>
+                                        <p style="color: lightslategray; font-size: 18px">Using the phone's compass and geolocation data at the time the photo is taken, W;nk's algorithm determines which campus building the user is interested in by accounting for field of view, distance, and bearing. </p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div style="display: flex; flex-direction: row;">
+                                    <div>                                
+                                        <img src="images/wink/infoicon.png" width="150px" height="auto"/>
+                                    </div>
+                                    <div style="width: 80%; margin-left: 5%; justify-content: center; align-items: center;">
+                                        <p style="font-size: 24px">After identifying the location, W;nk displays information about the campus building.</p>
+                                        <p style="color: lightslategray; font-size: 18px">W;nk queries the Firebase Realtime Database that's populated with information about campus buildings web-scrapped from the maps.northwestern.edu website. This includes an image of the building, building name, and brief description. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; flex-direction: column; width:100%; margin: 50px; padding: 20px; width:90%">
+                                <p style="font-size:30px; font-weight: bold;">W;nk UX Flow </p>
+                                <div style="display: flex; flex-direction:row; margin-top: 20px; width:80; justify-content: space-around;">
+                                    <div style="margin-right: 50px;">
+                                        <p style="font-size:24px;">Screens</p>
+                                        <ul>
+                                            <li>Landing Page</li>
+                                            <li>Tutorial</li>
+                                            <li>Camera View</li>
+                                            <li>Building Info</li>
+                                        </ul>
+                                    </div>
+
+                                    <img src="images/wink/winks1.png" style="max-height: 500px;"/>
+                                    <img src="images/wink/winks2.png" style="max-height: 500px;"/>
+                                    <img src="images/wink/winks3.png" style="max-height: 500px;"/>
+                                    <img src="images/wink/winks4.png" style="max-height: 500px;"/>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; flex-direction: column; width:100%; margin: 50px; padding: 20px; width:90%; justify-content: space-around;">
+                                <p style="font-size: 30px; font-weight: bold;">Video Demo:</p>
+                                <iframe height="600px" src="https://www.youtube.com/embed/4yaCkFHlrwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+
+                            <div style="display: flex; flex-direction: row; width:100%; margin: 50px; padding: 20px; width:90%; justify-content: space-evenly;">
+                                <p style="width: 50%; font-size: 20px;">W;nk strives to help people explore and navigate Northwestern's campus by giving users information about important campus buildings with a click of a button. This project involved thinking about the system in terms of gathering building data, defining an algorithm to distinguish between buildings, and displaying the information in a user friendly format. To learn more about the project, please visit the <a href="https://github.com/AndrewAcomb/NU_WinkNU"> NU W;nk GitHub repo!</a> </p>
+                                <img src="images/wink/winklogo.png" width="50%" height="50%" style="max-width: 300px;"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+			
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+			
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+			
+			// When the user clicks the button, open the modal 
+			/*btn.onclick = function() {
+			  modal.style.display = "block";
+			}*/
+			
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
+
+	</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jenny Lam | CS + Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<div id="header">						
+
+				<!-- Nav -->
+				<nav style="width:83%">
+					<div style="float:left"> 
+						<a href="index.html" class="logo">
+							<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Jenny Lam</span>
+						</a>
+					</div>
+
+					<div style="float:right">
+						<ul>
+							<li><a href="index.html">Work</a></li>
+							<li><a href="play.html">Play</a></li>
+							<li><a href="#aboutme">About</a></li>
+							<li><a href="#footer">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<!-- Main -->
+			<div id="main" style="top: 150px; position: relative; padding-bottom: 150px;">
+				<div class="inner">        
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close"><a href="index.html">&times;</a></span>
+                            <div style="text-align: left; margin: 20px; padding: 20px; height: 550px; border-bottom: solid 1px black; display: flex; flex-direction: row;">
+                                <div>
+                                    <p style="font-size: 60px; font-weight: bold;"> Tempo </p>
+                                    <p style="font-size: 24px; width: 85%"> Tempo is an app that helps motivate students to develop more effective study habits by gamifying the pomodoro time management technique.</p>
+                                    <p style="margin-top: 15px; color: lightslategray; font-weight: bold;">SKILLS</p>
+                                    <p>React Development, UI/UX Design, Agile</p>
+                                    <p style="margin-top: 10px; color: lightslategray; font-weight: bold;">PROJECT</p>
+                                    <p>COMP_SCI 497: Rapid Prototyping for Software Innovation Course Project</p>
+                                    <p style="margin-top: 10px; color: lightslategray; font-weight: bold;">TEAMMATES</p>
+                                    <p>Atul Jalan, Jing Jiang, Xunchuan Liu</p>
+                                    <p style="margin-top: 10px; color: lightslategray; font-weight: bold;">TOOLS</p>
+                                    <p>React, Cypress, Jest, Firebase Realtime Database </p>
+                                </div>
+                                <div>
+                                    <img src="images/tempo.png" width="auto" height="auto" style="max-width: 500px;" />
+                                </div>
+                            </div>	
+
+                            <div style="display: flex; flex-direction: column; width:100%; margin: 50px; margin-bottom: 0px; padding: 20px; width:90%">
+                                <p style="font-size:30px; font-weight: bold;">Tempo </p>
+                                <p>Students learning remotely have difficulty finding a clear distinction between work and home. To motivate students to study, Tempo is an app that promotes effective study habits using the pomodoro technique. As users complete work cycles, their fish tanks grow lively with more fish.
+                                After login, users start a pomodoro timer (4-25 minute work, 3-5 minute break cycles) to pace their studying. After each work cycle, users are rewarded with a fish added to their tank. Users can track their progress against their friends using the Leaderboard where they can view friend fish tanks as well as send messages and fish food gifts.</p>
+                            </div>
+                            <div style="display: flex; flex-direction: row; width:100%; margin: 50px; margin-top: 0px;padding: 20px; width:90%"> 
+                                <div style="display: flex; flex-direction: row; margin-top: 20px; "></div>
+                                    <img src="images/tempo/tempos3.png" style="max-height: 500px; max-width: 300px; margin: 5px;"/>
+                                    <img src="images/tempo/pomodorium.png" style="max-height: 500px; max-width: 300px; margin: 5px;"/>
+                                    <img src="images/tempo/leaderboard.png" style="max-height: 500px; max-width: 300px; margin: 5px;"/>
+                                    <img src="images/tempo/tempos1.png" style="max-height: 500px; max-width: 300px; margin: 5px;"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+			
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+			
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+			
+			// When the user clicks the button, open the modal 
+			/*btn.onclick = function() {
+			  modal.style.display = "block";
+			}*/
+			
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
+
+	</body>
+</html>
